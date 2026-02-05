@@ -64,7 +64,7 @@
 
 # for i in range(1, 13):
 #     ans = number * i
-#     print(f"{number} x {i} = {ans}")
+#     print(f"{number} x {i} = {ans}") 
 
 
 
