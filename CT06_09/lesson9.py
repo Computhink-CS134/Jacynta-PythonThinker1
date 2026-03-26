@@ -120,6 +120,24 @@
 # Translate the flowchart that you have drawn (shown on screen)
 # into Python code.
 
+# num_apples = int(input("How many apples do you want to buy?\n"))
+# num_oranges = int(input("How many oranges do you want to buy?\n"))
+
+# if num_apples > 5:
+#     apple_price = num_apples * 0.6 * 0.9
+# else:
+#     apple_price = num_apples * 0.6
+
+# if num_oranges > 5:
+#     orange_price = num_oranges * 0.9 * 0.9
+# else:
+#     orange_price = num_oranges * 0.9
+
+# total_price = round(orange_price + apple_price, 2)
+
+# print(f"The total price is ${total_price}")
+
+
 # --------------------------------------------------------------
 
 # Task 5: Flowchart for Temperature Monitor
