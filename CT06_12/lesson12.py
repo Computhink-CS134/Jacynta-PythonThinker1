@@ -222,39 +222,51 @@
 # 3. Disqualify user when they have gotten the wrong answer or
 #    skipped more than 5 times.
 
-import random
-score = 0
-correct_ans = 0
+# import random
+# score = 0
+# correct_ans = 0
+# num_skip = 0
 
-while True:
-    num1 = random.randint(1, 10)
-    num2 = random.randint(1, 10)
+# while True:
+#     num1 = random.randint(1, 10)
+#     num2 = random.randint(1, 10)
 
-    oper = random.randint(1, 3)
-    if oper == 1:
-        ans = num1 + num2
-        oper_sign = "+"
-    elif oper == 2:
-        ans = num1 - num2
-        oper_sign = "-"
-    else:
-        ans = num1 * num2
-        oper_sign = "x"
+#     oper = random.randint(1, 3)
+#     if oper == 1:
+#         ans = num1 + num2
+#         oper_sign = "+"
+#     elif oper == 2:
+#         ans = num1 - num2
+#         oper_sign = "-"
+#     else:
+#         ans = num1 * num2
+#         oper_sign = "x"
     
-    user_ans = int(input(f"What is {num1} {oper_sign} {num2}?\n"))
+#     user_ans = input(f"What is {num1} {oper_sign} {num2}?\n")
     
-    if user_ans == ans:
-        score += 2
-        print("That's correct!")
-        correct_ans += 1
+#     if user_ans.lower() == "skip":
+#         num_skip += 1
+#         print(f"You have skipped {num_skip} times.")  
         
-        if correct_ans == 5:
-            print(f"Your score: {score}")
-            break
+#         if num_skip == 5:
+#             print("You have skipped too many times. \nGAME END")
+#             break 
+
+#     elif int(user_ans) == ans:
+#         score += 2
+#         print("That's correct!")
+#         correct_ans += 1
+
+#         if correct_ans == 5:
+#             print(f"Your score: {score}")
+#             break
         
-    else:
-        print("Wrong! Try again.")
-        score -= 1
+#     else:
+#         print("Wrong! Try again.")
+#         score -= 1
+#         if score <= 0:
+#             print("You have to work harder on your math. \nGAME END")
+#             break
 # ----------------------------------------------------------------
 
 # # Task 6: Dice Roll till 4
@@ -268,6 +280,14 @@ while True:
 #     a. Using 'random.randint()', assign 'num' variable a random
 #        number between 1 and 6.
 #     b. Print the random number generated.
+
+# import random
+# num = 0
+
+# while num != 4:
+#     num = random.randint(1, 6)
+#     print (num)
+
 
 # **Bonus**
 # Some ideas to improve on the above program:
