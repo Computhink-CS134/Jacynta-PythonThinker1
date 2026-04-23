@@ -122,9 +122,18 @@
 # 4. If name == "Grapes", print ": Get the FarmFresh
 #    brand"
 
-# -------------------------------------------------------------------
+# for i in range(len(groceries)):
+#     if groceries[i] == "Apples":
+#         print(f"{groceries[i]}: I need five of these.")
+#     elif groceries[i] == "Carrots":
+#         print(f"{groceries[i]}:I need 3 of these.")
+#     elif groceries[i] == "Grapes":
+#         print(f"{groceries[i]}: Get the Farmfresh brand.")
+#     else:
+#         print(groceries[i])
+    
+ # Task 3: Grocery shopping
 
-# # Task 3: Grocery shopping
 # Write a program to keep track of the groceries you have placed
 # into the basket.
 
@@ -138,6 +147,20 @@
 #     c. "I have bought Carrots"
 #     d. etc...
 
+# groceries = []
+
+# while True:
+#     grocery = input("What item have you added to your basket?\n").lower()
+
+#     if grocery == "end":
+#         break
+    
+#     groceries.append(grocery)
+
+# for i in range(len(groceries)):
+#   print(f"I have bought {groceries[i]}")
+
+
 # -------------------------------------------------------------------
 
 # # Task 4: Online Catalogue
@@ -149,14 +172,34 @@
 # 3. Add each item into the catalogue list
 # 4. End the loop when the user types "end"
 
+# catalogue = []
+
+# while True:
+#     items = input("Enter the items the online catalogue should have:\n").lower()
+    
+#     if items == "end":
+#         break
+
+#     catalogue.append(items)
+
+
 # **Task 4b**:
 # Based on the list created by the grocery store manager, do the
 # following:
 
 # 1. Imagine a customer browsing the website of the grocery store.
 #    Ask the customer: "What are you looking for?"
-# 2. If the item is in the list, say "Yes we sell that."
+# 2. If the item is in the list, say "Yes, we sell that."
 # 3. Else, say "Sorry, we don't have that."
+
+# customer = input("What are you looking for?\n")
+
+# # for i in range(len(catalogue)):
+
+# if customer in catalogue:
+#     print("Yes, we sell that.")
+# else:    
+#     print("Sorry, we don't have that.")
 
 # -------------------------------------------------------------------
 
@@ -172,8 +215,17 @@
 #     b. Winner #2: 3241
 #     c. Etc...
 
-# -------------------------------------------------------------------
+# import random
+# winners = []
 
+# for i in range(10):
+#     winners.append(random.randint(1, 9999))
+
+# for i in range(10):
+#     print(f"Winner #{i +  1}: {winners[i]}")
+
+
+# -------------------------------------------------------------------
 # # Task 6: Pizza Topping
 # Create a program that asks the user what pizza topping they want
 
@@ -188,3 +240,31 @@
 #    (By index)
 # 4. Exit the 'while' loop only when the user enters "end"
 # 5. Print the toppings that the user has selected
+
+toppings = [
+    "Bacon",
+    "Black olives",
+    "Chicken",
+    "Cheese",
+    "Green peppers",
+    "Ham",
+    "Mushrooms",
+    "Onions",
+    "Pepperoni",
+    "Pineapple",
+]
+
+for i in range(len(toppings)):
+    print(f"{i}. {toppings[i]}")
+
+user_toppings = []
+
+while True:
+    user = input("What topping do you want on your pizza?\n")
+    if user == "end":
+        break
+    user_toppings.append(user)
+    
+print(user_toppings)
+
+
