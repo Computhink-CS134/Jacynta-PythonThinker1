@@ -1,172 +1,133 @@
-# Lesson 14 - Turtle (Part 1)
+# Lesson 14 - Advanced Projects with Lists
 
-# Recap 1: Die Rolling Simulator
-**Recap 1a**:
-Create a program that simulates the rolling of a die 5 times by
-storing each roll in a list.
+## Recap 1: Die Rolling Simulator​
+### 1a
+Create a program that simulates the rolling of a die 5 times by storing each roll in a list.​
 
-At the end of the 5 rolls, print the list.
+At the end of the 5 rolls, print the list.​
 
-Example Output:
-[4, 6, 5, 3, 4]
+Example output:​ [4, 6, 5, 3, 4]​
 
-1. Import the 'random' library
-2. Create an empty list called 'rolls'
-3. Using a 'for' loop, and the 'random.randint()' function, append
-   a random number generated into the list. Repeat 5 times.
-4. Print the 'rolls' list.
+Import the ‘random’ library​
 
-**Recap 1b**:
-Using a 'for' loop, expand on your answer in Recap 1a to add up all
-the numbers in the list generated
+Create an empty list called ‘rolls’​
 
-Example Output:
-[4, 6, 5, 3, 4]
-Sum: 22
+Using a ‘for’ loop, and the ‘random.randint()’ function, append a​
+random number generated into the list. Repeat 5 times.​
 
-1. Create a variable 'sum' with the value of 0
-2. Using a 'for' loop, loop through the 'rolls' list:
-        Add each item in the list into the variable 'sum'
-3. Print the sum of all values in the list using string concatenation.
+Print the ‘rolls’ list.
 
----------------------------------------------------------------------
+### 1b
+Using a ‘for’ loop, expand your answer in Recap 1a to add up all the numbers in the list generated.
 
-# Task 1: Creating a window
-**Task 1a**:
-By importing the 'turtle' library and using the following functions,
-create a blank window that stays:
-1. turtle.Screen()
-2. .mainloop()
+Example Output:​
+[4, 6, 5, 3, 4]​
+Sum: 22​
 
-**Task 1b**:
-Modify your code to create a window that is 600 in width and 400 in
-height
+Create a variable ‘sum’ with the value of 0.​
 
-Hint:
-???.setup(width=???, height=???)
+Using a ‘for’ loop, loop through the ‘rolls’ list:​ Add each item in the list into the variabl‘sum’​.
 
----------------------------------------------------------------------
+Print the sum of all values in the list using string concatenation.
 
-# Task 2: Creating a Turtle
-By modifying the code you have done previously, create the
-following agents:
+## Task 1: Printing Parallel Lists​
+Create 2 parallel lists with 4 values each.​
 
-**Your new code must be between the turtle.screen() and .mainloop()
-function**
+fruits: List of fruits​
+prices: List of prices of the fruits​
 
-**Task 2a**:
-Create an orange turtle
+Use a for loop to print each fruit with its price in this format:​
+ costs $.
 
-1. Using 'import', import the 'turtle' library
-2. Using the 'turtle.Turtle()' function, create an agent called "turtle"
-3. Using the '.shape()' function, set the shape of the "turtle" agent
-   to a turtle
-4. Using the '.fillcolor()' function, turn "turtle" orange
+## Task 2: Inventory Stock Checker​
+### 2a
+Create a program that: ​
+checks a supermarket’s inventory stock levels and ​allows the user to search for an item.​
 
-**Task 2b**:
-Create a green square
+Loop through the given lists to check the status of the stock, if the 	stock is:​
 
-1. Using 'import', import the 'turtle' library
-2. Using the 'turtle.Turtle()' function, create an agent called "square"
-3. Using the '.shape' function, set the shape of the "square" agent
-   to a square
-4. Using the '.fillcolor()' function, turn "square" green
+Equal to 0 → Status: Out of Stock​
+Less than 10 → Status: Low Stock​
+10 or more → Status: Well Stocked​
 
----------------------------------------------------------------------
+Print the result in this format:​
+Item:  | Stock:  | Status: ​
 
-# Task 3: Drawing
-Given the number of sides and each interior angle, draw each of the
-following shapes using a loop and the following functions:
-    .seth()
-    .up()
-    .down()
-    .forward()
-    .backward()
-    .left()
-    .right()
+items = ["Apple", "Milk", "Bread", "Egg", "Chocolate"]​
+stock = [15, 0, 8, 25, 3]
 
-**Task 3a**: Draw a line
-Number of sides: 1
-Interior angle: NA
+### 2b
+Ask the user to input an item to
+check.​
+Check if the item is in the list.​
+1. If the item is in the list:​
+- Find its index​
+- Print the result in this format:​
+- Result: We have  (s) remaining.​
+2. If the item is not in the list:​
+- Print an error message​
+- Error: Item not found in database.
 
-**Task 3b**: Draw a triangle
-Number of sides: 3
-Interior angle: 120
+## Task 3: Bookshop Shopping List​
+### 3a​
+Create a program that:​
+- add items to a shopping list​
+- calculate their costs​
+- print a receipt​
 
-**Task 3c**: Draw a square
-Number of sides: 4
-Interior angle: 90
+1. Print the current shopping list.​
+shopping_list = ["Pens", "Pencils", "Erasers", "Notebooks"]​
 
-**Task 3d**: Draw a pentagon
-Number of sides: 5
-Interior angle: 72
+2. Ask the user how many more items they
+want to buy.​
 
-**Task 3e**: Draw a hexagon
-Number of sides: 6
-Interior angle: 60
+3. Use a for loop to ask what the items are and append it to the shopping list.​
 
-**Task 3f**: Draw a circle
-Number of sides: 360
-Interior angle: 1
+4. Print the updated shopping list.​
 
----------------------------------------------------------------------
+### 3b
+1. Create an empty list to store the
+prices: price_list​
 
-# Task 4: Creating a Crosshair (.goto(), .setx() and .sety())
-Write a program that moves the turtle to draw a horizontal line
-across the middle of the screen and then a vertical line down the
-centre of the screen, creating a crosshair pattern.
+2. For each item in the shopping
+list:​
+- Ask for price​
+- Ask for quantity​
+- Multiply the price and quantity and append it to the price list​
 
-1. Import the 'turtle' library
-2. Using 'turtle.Screen()', create a turtle screen and set the window
-   size to 600x400 using the following line of code:
-        Hint: ???.setup(width=???, height=???)
-3. Create a turtle, and use '.penup()'
-4. Use '.goto()' to position your turtle at x = -300 and y = 0
-5. Use '.pendown()' and use '.setx()' to set your turtle's x position
-   to x = 300
-6. '.penup()' and using '.goto()', reposition your turtle to
-   x = 0 and y = 200
-7. Use '.pendown()' and '.sety()' to set your turtle's y position
-   to y = -200
-8. End off with a '.mainloop()' function to keep the window open
+3. Print the price list
 
----------------------------------------------------------------------
+### 3c
+Use a for loop to print the shopping list and price list following
+the format.
 
-# Task 5: Random Points (.write())
-Write a program where the turtle moves to 10 random positions on the
-screen, drawing a small square at each spot. Display the x and y
-coordinates of each position next to the squares.
+Add up the total cost in the price list and print it.
 
-1. Import 'turtle' and 'random' library
-2. Create a 600x600 turtle screen using 'turtle.Screen()' and
-   '.setup(width=,height=)' function
-3. Within a 'for' loop,
-        a. Create 'x' variable and assign a random value between
-           -280 and 280.
-        b. Create 'y' variable and assign a random value between
-           -280 and 280.
-        c. Using '.goto()', position your turtle at the random
-           coordinate 'x' and 'y' generated.
-        d. Using a 'for' loop and the movement commands, draw a 5x5
-           small square
-        e. Reposition your turtle object 40 steps lower than the
-           randomly generated x and y coordinate
-        f. Write the coordinate of the square using '.write()'
-   
+## Task 4: Scissors Paper Stone​
+Create a scissors paper stone game, the user plays against a computer that picks randomly.
 
----------------------------------------------------------------------
+### 4a
+Create a list of possible moves:​
+["scissors", "paper", "stone"]​
 
-# Task 6: Follow the Edge I (algorithm to detect edge)
-Using .xcor() and .ycor() to detect the edge, make the turtle move
-around the perimeter of the screen, turning at the corners.
+Initialize 2 variables:​
+- player_score​
+- computer_score​
 
-1. Import the 'turtle' library
-2. Create a 400x400 screen using '.Screen()' and '.setup()'
-3. Create 2 variables that holds the x and y limit
-4. Using .goto(), position the turtle at the lower left corner of the
-   limit
-5. Within a forever loop, use the following format for each direction,
-   turn the turtle at each of the 4 corners:
-        While 'x' coordinate of turtle is less than 'x' limit,
-             Move forward
-        Turn left 90
+Use a while loop to ask for the user’s move while player_score and computer_score is less than 3.​
+
+### 4b
+In the while loop:​
+
+1. Import the random library, use random.choice() to let the computer pick from the move list and print it.​
+
+2. Compare the user’s choice and computer’s choice to determine the result.​
+
+3. Increment player_score or computer_score depending on the result.​
+
+4. Print the result and scores.
+
+### 4c
+1. Print the final result after the while loop has ended.​
+
+2. Modify the loop to check for invalid choices.​
